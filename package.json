@@ -1,0 +1,19 @@
+{
+  "name": "template",
+  "version": "1.0.0",
+  "description": "",
+  "scripts": {
+    "clean-dist": "del /q dist",
+    "copy-assets": "xcopy src\\assets dist\\assets /s /e /y ",
+    "dev": "npm run clean-dist & npm run copy-assets & parcel src/index.html",
+    "prod": "npm run clean-dist & parcel build src/index.html & npm run copy-assets & copy public dist"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "lit": "^3.3.1"
+  },
+  "devDependencies": {
+    "@parcel/transformer-sass": "^2.15.2"
+  }
+}
